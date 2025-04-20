@@ -18,6 +18,11 @@ function App() {
       return;
     }
 
+    if (senha.length < 10) {
+      setMensagem('The password must have at least 10 characters!');
+      return;
+    }
+
     if (email === 'daniele.gomes@pucpr.br' && senha === '987654!') {
       setMensagem('Acessado com sucesso!');
     } else {
