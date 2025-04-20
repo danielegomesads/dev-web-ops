@@ -7,10 +7,18 @@ function App() {
   const [senha, setSenha] = useState('');
   const [mensagem, setMensagem] = useState('');
 
+  const specialCharRegex = /[!@#$%^&*]/;
+
   // Função de validação ao clicar no botão ou pressionar Enter
   const validarLogin = (event) => {
     if (event) event.preventDefault(); // Evita o reload da página
-    if (email === 'daniele.gomes@pucpr.br' && senha === '987654') {
+
+    if (!specialCharRegex.test(senha)) {
+      setMensagem('A senha deve conter pelo menos um caractere especial!');
+      return;
+    }
+
+    if (email === 'daniele.gomes@pucpr.br' && senha === '987654!') {
       setMensagem('Acessado com sucesso!');
     } else {
       setMensagem('Usuário ou senha incorretos!');
