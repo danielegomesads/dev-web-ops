@@ -23,7 +23,7 @@ function App() {
       return;
     }
 
-    if (email === 'daniele.gomes@pucpr.br' && senha === '987654!') {
+    if (email === 'daniele.gomes@pucpr.br' && senha === '9876543210!') {
       setMensagem('Acessado com sucesso!');
     } else {
       setMensagem('Usuário ou senha incorretos!');
